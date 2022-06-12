@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+void main()
+{
+    int a[100];
+    int i, maximo, minimo, n;
+	
+	
+       printf("\n\nEncontre o elemento máximo e mínimo em uma matriz:\n");
+       printf("--------------------------------------------------\n");	
+
+       printf("Insira o número de elementos a serem armazenados na matriz: ");
+       scanf("%d",&n);
+   
+       printf("Entrada %d dos elementos na matriz:\n",n);
+       for(i=0;i<n;i++)
+            {
+	      printf("elementos - %d : ",i);
+	      scanf("%d",&a[i]);
+	    }
+
+
+    maximo = a[0];
+    minimo = a[0];
+
+    for(i=1; i<n; i++)
+    {
+        if(a[i]>maximo)
+        {
+            maximo = a[i];
+        }
+
+
+        if(a[i]<minimo)
+        {
+            minimo = a[i];
+        }
+    }
+    printf("O elemento maximo eh: %d\n", maximo);
+    printf("o elemento minimo eh : %d\n\n", minimo);
+}
